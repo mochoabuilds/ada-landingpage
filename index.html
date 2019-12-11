@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ada</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
+</head>
+
+<body>
+    <section class="container">
+        <div class="content">
+            <h2>Why did I pick this idea to work on?</h2>
+            <p>As Earth’s cities become filled with smog and traffic jams, new solutions must surface to solve our global transit challenge.  Existing infrastructure cannot support another generation of gas guzzling vehicles on the roads.  The lost time, wasted fuel and climb in cost of doing business is not sustainable.  We must begin chipping away at this problem.  We deploy a “hybrid system” made up of a robotaxi & human safety driver to solve some of the problem. </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h2>How do we navigate the tricky route to autonomy?</h2>
+            <p>We keep it simple and focus on the things we understand. We focus on the customer facing business as the engineering part of the equation is becoming commodified and more easily deployable.</p>  
+        </div>
+    </section>s
+
+    <section class="container">
+        <div class="content">
+            <h2>What do we different than other Chicago water taxi companies?</h2>
+            <p>Our competitors are focused way too much on moving as many people as possible.  We are different because we’re trying to bring an intimate space to a couple of strangers/friends to share, and incite some snewfound sociability around river-way transit.</p> 
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h2>Wanna Know More?</h2>
+              <p>PDF>><a href="paper.pdf"> Establishing a “Driverless System” Along the Riverway Using Human-Machine Symbiosis (November 2018-)</a></p>
+              <p>Michael Valentino Ochoa et la.</p>
+  		</body>
+        </div>
+    </section>
+
+
+    <div id="set-height"></div>
+
+    <!-- tells browser video source formats -->
+    <video id="v0" tabindex="0", autobuffer preload>
+        <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' 
+        src=""></source>
+    </video>
+    
+    <!-- makes div-content "stick" to div-container --> 
+    <script src="sticky.js"></script>
+   
+    <script>
+        // animate chosen div when it comes into view
+        enterView({
+            selector: 'section',
+            enter: function(el) {
+                el.classList.add('entered');
+            }
+        })
+
+    	// start video at frame 0
+        var frameNumber = 0, 
+        
+        // controls playback speed
+        playbackConst = 1200, 
+        
+        // length of scroll bar based on video duration 
+        setHeight = document.getElementById("set-height"), 
+        
+        // select video element         
+        vid = document.getElementById('v0'); 
+
+    // waits till page has loaded enough info to get total height
+    vid.addEventListener('loadedmetadata', function() {
+    setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+    });
+
+    // uses requestAnimationFrame for smoother playback
+    function scrollPlay(){  
+    var frameNumber  = window.pageYOffset/playbackConst;
+    vid.currentTime  = frameNumber;
+    window.requestAnimationFrame(scrollPlay);
+    }
+
+    window.requestAnimationFrame(scrollPlay);
+    </script>
+</body>
+</html>
