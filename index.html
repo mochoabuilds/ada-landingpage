@@ -14,28 +14,30 @@
     <section class="container">
         <div class="content">
             <h2>Our Mission</h2>
-            <p>As Earth’s cities become filled with smog and traffic jams, new solutions must surface to solve our global transit challenge.  Existing infrastructure cannot support another generation of gas guzzling vehicles on the roads.  The lost time, wasted fuel and climbing costs of business are not sustainable.  Our goal is to begin chipping away at this problem.  Our mission is to be deploy Chicago's most hospitable, accessible and carbon neutral riverway transit </p>
+            <p>As Earth’s cities become filled with smog and traffic jams new solutions must surface to solve our global transit challenge.  Existing infrastructure cannot support another generation of gas guzzling vehicles.  The lost time, wasted fuel and climbing costs of doing business are not sustainable.  We must begin chipping away at this collective problem. Our mission is to be deploy Chicago's most hospitable, accessible and carbon neutral riverway transit. </p>
         </div>
     </section>
 
     <section class="container">
         <div class="content">
             <h2>Our History</h2>
-            <p>The story begins in 2018 along the Chicago riverwalk. I (Michael Valentino Ochoa) was considering graduate studies and the riverway was a frequent spot for my C++/math self study before my work shifts.  By some accounts, the sounds of the river struck me first.  I grew interested in the sounds made as the wake splashed the riverwalk due to a passing boat.  Soon after, half formed ideas began to coalesce.  Working from my apartment, I built a prototype scale model water robotaxi that seeks to travel from the Chicago Riverwalk to Goose Island without human intervention.   </p>  
+            <p>The story begins in 2018 along the Chicago riverwalk. As I considered graduate school and the riverway was a frequent spot for my preparatory coursework.  By some accounts, the sounds of the river struck me first.  I grew interested in the sounds made as the wake splashed the riverwalk. Soon after, half formed ideas began to coalesce.  Working from my apartment, I built a prototype scale model water robotaxi that travels from the Chicago Riverwalk to Goose Island without human intervention. 
+            </p>  
         </div>
     </section>s
 
     <section class="container">
         <div class="content">
             <h2>How will we do it?</h2>
-            <p>Currently Rewriting.</p> 
+            <p>We deploy a hybrid system made of up of a robotaxi and human safety driver to chip away at the problem.  The system blends the rational analytics of a computer integrating inertial, optical and thermal data with human strategic guidance.  We believe in letting machines do what they do best (lane keeping, active cruise control, trajectory tracking and obstacle avoidance) and letting humans do what we do best (be the social and hospitable animals that we are).  Our narrow focus on blending L2+ level autonomy with hospitality means our transit does more provide convenience, it’s a space that prepares you to take on the city — a kind of home-away-from-home on the river. 
+            </p> 
         </div>
     </section>
 
     <section class="container">
         <div class="content">
             <h2>Wanna Know More?</h2>
-              <p>PDF>><a href="paper.pdf"> Establishing a Hybrid System for L2+ Autonomy Using Human-Machine Symbiosis (Last Update: 12/20/19)</a></p>
+              <p>PDF>><a href="paper.pdf"> Establishing L2+ Level Autonomy for the Riverway Using Computational Approaches (Last Update: 12/20/19)</a></p>
               <p>Michael Valentino Ochoa et la.</p>
   		</body>
         </div>
@@ -61,7 +63,6 @@
                 el.classList.add('entered');
             }
         })
-
     	// start video at frame 0
         var frameNumber = 0, 
         
@@ -73,19 +74,16 @@
         
         // select video element         
         vid = document.getElementById('v0'); 
-
     // waits till page has loaded enough info to get total height
     vid.addEventListener('loadedmetadata', function() {
     setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
     });
-
     // uses requestAnimationFrame for smoother playback
     function scrollPlay(){  
     var frameNumber  = window.pageYOffset/playbackConst;
     vid.currentTime  = frameNumber;
     window.requestAnimationFrame(scrollPlay);
     }
-
     window.requestAnimationFrame(scrollPlay);
     </script>
 </body>
