@@ -6,5 +6,5 @@ Global sea level rise will be among one of many challenges facing our society th
 
 Our story begins in the summer of 2018. Combing thru preparatory coursework for graduate school the river was a frequent spot for self-study. Eventually some half formed ideas began to coalesce watching boats pass by. Working from my apartment, I began conceptualizing the hull design, sensor kit and technology stack for a scale model autonomous boat specialized for Chicago's riverways.
 
-
+https://mochoabuilds.github.io/tripp
 
